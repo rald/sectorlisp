@@ -67,7 +67,7 @@ char *trim(char *a) {
 char *getstr(const char *prompt) {
 	char *line = NULL;
 	int i=0, c=0;
-	printf("%s",prompt);
+//	printf("%s",prompt);
 	if(!feof(stdin)) {
 		line=malloc(sizeof(*line)*STRING_MAX);
 		line[0]='\0';
