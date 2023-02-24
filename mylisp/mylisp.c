@@ -1,7 +1,7 @@
-#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include <errno.h>
 
 
@@ -63,7 +63,7 @@ char *trim(char *a) {
     return a;
 }
 
-#define STRING_MAX 512
+#define STRING_MAX 65536
 char *getstr(const char *prompt) {
 	char *line = NULL;
 	int i=0, c=0;
@@ -82,6 +82,7 @@ char *getstr(const char *prompt) {
 		}
 		line[i]='\0';
 		trim(line);
+//		printf("%s\n",line);
 	}
 	return line;
 }
@@ -294,5 +295,3 @@ int main() {
   }
   return 0;
 }
-
-
